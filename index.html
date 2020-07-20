@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+     </head>
+   <style>
+  body{
+  background:skyblue;
+  margin:10;
+  background-size:cover
+  font-family:Verdana;
+  font-size:20px;
+  }
+ .navbar{
+     background:#142b47;
+     width:140%;
+     text-align:center;
+  }
+ .navbar ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+    position:relative;
+ }
+ .navbar ul li a{
+   display:block;
+   padding:25px;
+   color:white;
+   text-decoration:none;
+   width:150px;
+  }
+ .navbar ul:after{
+    content:"";clear:both;
+    display:block;
+  }
+ .navbar ul li{
+   float:left;
+   listy-style:none;
+}
+ .navbar ul ul{
+     display:none;
+  }   
+ .navbar ul li:hover>ul{
+     display:block;
+  }
+ .navbar ul li:hover{
+     transition:0.9s;
+  }
+ .navbar ul li:hover a{
+    color:white;
+  }
+ .navbar ul ul{
+   background:lightblue;
+   padding:10;
+   margin:0;
+   position:absolute; top:100%;
+  }
+ .navbar ul ul li{
+   float:none;
+   position:relative;
+  }
+ .navbar ul ul li a{
+   padding:25px;
+   width:300px;
+   text-align:left;
+  }
+ .navbar ul ul li a:hover{
+   color:black;
+   transition:0.9s; 
+  } 
+   .wrap{
+     width:900px;
+     height:500px;
+     margin:auto;
+     background:#000;
+     padding:10px 50px;
+     margin-top:50px;
+  }
+  .slide{
+    position:fixed;
+    top:80%;
+    left:1%;
+    line-height:20px;
+    transform:translate(-50%);
+    transitition:0.6 ease;
+  }
+  .slide a{
+    display:flex;
+    justify-content:center;
+    align-items:certer;
+    border-radius:50%;
+    padding:10px;
+    line-height:20px;
+    box-shadow:0px 2px 2px 1px rgba(0,0,0,0.2);
+  }
+  @keyframes slider{
+ 0%{left:0;}
+ 20%{left:0;}
+ 25%{left:-100;}
+ 45%{left:-100%;}
+ 50%{left:-200%;}
+ 70%{left:-200%;}
+ 75%{left:-300%;}
+ 95%{left:-300%;}
+ 100%{left:-400%;}
+  }
+  @-webkit-keyframes slider{
+ 0%{left:0;}
+ 20%{left:0;}
+ 25%{left:-100;}
+ 45%{left:-100%;}
+ 50%{left:-200%;}
+ 70%{left:-200%;}
+ 75%{left:-300%;}
+ 95%{left:-300%;}
+ 100%{left:-400%;}
+  }
+   @-moz-keyframes slider{
+ 0%{left:0;}
+ 20%{left:0;}
+ 25%{left:-100;}
+ 45%{left:-100%;}
+ 50%{left:-200%;}
+ 70%{left:-200%;}
+ 75%{left:-300%;}
+ 95%{left:-300%;}
+ 100%{left:-400%;}
+  }
+ .img-slider{
+    overflow:hidden;
+  }
+ .image-slider figure{
+    position:relative;
+    width:500%;
+    margin:0;
+    left:0;
+    animation:10s slider infinite;
+  }
+ .image-slider figure img{
+    width:20%;
+    float:left;
+  }
+ 
+  .body{
+     font-family:tahoma;
+     overflow-x:hidden;
+     background-image:url(ur.jpg);
+  }
+ .content{
+       margin:0px 100px 0px 700px;
+       width:190px;
+       perspective:1000px;
+       position:relative;
+       padding-top:80px;
+  }
+ .content-carrousel{
+      width:100%;
+      position:absolute;
+      float:right;
+      animation:rotar 15s infinite linear;
+      transform-style:preserve-3d;
+  }
+ .content-carrousel:hover{
+      animation-play-state:paused;
+      cursor:pointer;
+  }
+  .content-carrousel figure{
+    width:100%;
+    height:150px;
+    border:1px solid #4d444d;
+    overflow:hidden;
+    position:absolute;
+  } 
+  .content-carrousel figure:nth-child(1){
+     transform:rotateY(0deg) translateZ(300px);
+  }
+  .content-carrousel figure:nth-child(2){
+     transform:rotateY(50deg) translateZ(300px);
+  }
+  .content-carrousel figure:nth-child(3){
+     transform:rotateY(100deg) translateZ(300px);
+  }
+  .content-carrousel figure:nth-child(4){
+     transform:rotateY(150deg) translateZ(300px);
+  }
+  .content-carrousel figure:nth-child(5){
+     transform:rotateY(200deg) translateZ(300px);
+  }
+  .content-carrousel figure:nth-child(6){
+     transform:rotateY(250deg) translateZ(300px);
+  }
+  .content-carrousel figure:nth-child(7){
+     transform:rotateY(300deg) translateZ(300px);
+  }
+  .shadow{
+     position:absolute;
+     box-shadow:0px 0px 20px 0px #000;
+     border-radius:2px;
+  }
+  .content-carrousel img{
+     image-rendering:right;
+     transition:all 300ms;
+     width:100%;
+     height:100%;
+  }
+  .content-carrousel img:hover{
+     transform:scale(1.2);
+     transition:all 300ms;
+  }
+    @keyframes rotar{
+      from{
+          transform:rotateY(0deg);
+  }  to{
+          transform:rotateY(360deg);
+  }
+        }
+ 
+   body{
+        margin:0;
+        background-color:lightblue;
+      }
+   ul{
+    padding:5px;
+    margin:0 0 0 500px;
+    list-style:none;
+  }
+   li{
+     float:left;
+  }
+  .logo img{
+       position:absolute;
+       margin-top:5px;
+       margin-left:10px;
+  }
+
+   </style>
+   <!--****header division*****-->
+  
+    <!--image logo division in header-->
+
+    <div style="width:150px;height:150px;float:left;">
+    <img src="C:\Users\Dell\Desktop\logo.jpg" style="width:150px;height:150px;border-radius:50%;">
+</div>
+     
+
+   <!--text division in header-->
+     <div style="width:850px;height:150px;margin-left:150px;">
+     
+
+  <br/>
+     <div style="text-align:left;font-size:20px;font-family:arial black;text-shadow:1px 1px dodgerblue;">
+     <div>DOON GROUP OF COLLEGE</div>
+
+    <div style="text-align:left;font-size:20px;font-family:arial black;text-shadow:1px 1px dodgerblue;">
+    <div> SUNDERPUR,DISTT,SAHARANPUR(U.P.)</div>
+ <div style="text-align:right;font-size:30px;font-family:black;text-shadow:2px 2px dodgerblue;">
+   <div class="navbar">
+      
+     <ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About Us</a>
+                           <ul>
+                               <li><a href="#">About Insitute</a></li>
+                               <li><a href="#">Our Vision ans Mission</a></li>
+                           </ul>
+                        </li>
+			<li><a href="#">Courses</a>
+                           <ul>
+                               <li><a href="#">Under Graduate</a></li>
+                               <li><a href="#">Post Graduate Courses</a></li>
+                               <li><a href="#">Pharmancy</a></li>
+                               <li><a href="#">Polytechnic</a></li> 
+                           </ul>
+                         </li>
+			    <li><a href="#">Campus</a>
+                              <ul>
+                                <li><a href="#">Computer Lab</a></li>
+                                <li><a href="#">Library</a></li>
+                                <li><a href="#">Hostel</a></li>
+                                <li><a href="#">Cafeteria</a></li>
+                                <li><a href="#">Transport</a></li>
+                                <li><a href="#">Lecture Hall</a></li>
+                                <li><a href="#">Auditorium</a></li>
+                                <li><a href="#">Medical Facility</a></li>
+                             </ul>
+                           </li>
+			<li><a href="#">Contact Us</a></li>
+		</ul>    
+        
+      </div>
+     </div>  
+</div>
+      <div style="text-align:left;font-size:40px;font-family:arial black;text-shadow:2px 2px dodgerblue;">  
+       <div>WELCOME TO DOON</div>
+       <div>COLLEGE IN NORTHERN INDIA</div>
+       <div>BEST Academics Institution</div>
+   <div class="wrap">
+     <div class="image-slider">
+   <figure>
+      <div style="text-align:left;font-size:40px;font-family:arial blue;text-shadow:2px 2px dadgerblack;"> 
+	 <p align=right><img src="C:\Users\Dell\Desktop\doon.jpg"width="1000px" height="400px"></p>
+         <p align=right><img src="C:\Users\Dell\Desktop\image8.jpg"width="1000px" height="400px"></p>
+         <p align=right><img src="C:\Users\Dell\Desktop\image.jpg"width="1000px" height="400px"></p>
+         <p align=right><img src="C:\Users\Dell\Desktop\imagee.jpg"width="1000px" height="400px"></p>  
+   </figure>
+     </div>
+</div>
+    <p>Welcome to Doon Group Of Colleges Saharanpur Uttar pradesh (India)-:
+   <br>
+  <div style="font-size:30px;font-family:arial blue;text-shadow:2px 2px dadgerblack;">
+
+Doon Group Of Colleges, one of the premier Institutions in the field of Technical and Management Education, was established in 2002. The institute is located at Dehradun Road Saharanpur (U.P) India in the National Capital region .
+The institute is approved by All India Council for Technical Education, Ministry of HRD, Government of India and is affiliated to the Dr. A.P.J. Abdul Kalam Technical University, Lucknow. 
+In a short span of time the institute has grown from strength to strength and is counted among the best engineering colleges in Northern India.</p>
+  <div>
+  <div style="text-align:left;font-size:40px;font-family:arial black;text-shadow:2px 2px dodgerblue;">
+  <p>Placements-:
+  <div style="font-size:30px;font-family:arial blue;text-shadow:2px 2px dadgerblack;">
+  The Institute will give special attention to Training and Placements of its students. For this purpose a full time T&P officer will shortly be appointed. The Institute has made a clear roadmap for making its students more employable by way of developing their overall personality.The teaching pedagogy adopted by the institute, regular industrial visits, regular guest lectures delivered by experts from industry will make our students better from the rest of the B-School graduates, are some of the steps that will be taken by the Institute right from the start. 
+
+  </div>
+  <div>
+   <div style="text-align:left;font-size:40px;font-family:arial black;text-shadow:2px 2px dodgerblue;">  
+     <p>Facility-:
+     <div style="font-size:30px;font-family:arial blue;text-shadow:2px 2px dadgerblack;">
+  Separate hostels for boys and girls within the campus with modern and hygienic mess. Fully digitally enable campus with Wi-Fi infrastructure. Interactive lecture theatre and modular e-learning applications offering the most contemporary instructional design for all course work.State of art equipments, world class lab facilities, modern academic block.Sports and Extracurricular facilities.Separate boys and girls Common rooms in academic block.
+Facilitation of student loans with national banks for education and education accessories.Round the clock Safe transport facilities allowing students easy access to the campus.Round the clock Medical facility with Ambulance.Students medical insurance facility with cashless.Our modern canteen offers the students a wide range of edible foods and snacks.Photostat STD. 
+</div>
+  <section class="slideshow">
+    <div class="content">
+    <div class="content-carrousel">
+        <figure class="shadow"><img src="C:\Users\Dell\Desktop\image1.jpg"></figure>
+        <figure class="shadow"><img src="C:\Users\Dell\Desktop\image2.jpg"></figure>
+        <figure class="shadow"><img src="C:\Users\Dell\Desktop\image3.jpg"></figure>
+        <figure class="shadow"><img src="C:\Users\Dell\Desktop\image4.jpg"></figure>
+        <figure class="shadow"><img src="C:\Users\Dell\Desktop\image5.jpg"></figure>
+        <figure class="shadow"><img src="C:\Users\Dell\Desktop\image6.jpg"></figure>
+        <figure class="shadow"><img src="C:\Users\Dell\Desktop\image7.jpg"></figure>
+</div>
+</div>
+    <div class="style">
+     
+  <div style="font-size:30px;font-family:arial blue;text-shadow:2px 2px dadgerblack;">
+         <p text-align="left">KEEP IN TOUCH</p><br/>
+      Cell-:9412007104<br/>
+ 
+      Phn.NO.-:0132-27848445|2784787|2784141<br/>
+      NH-72-A,Delhi-Dehradun Road<br/>
+      Vill.S.P.O SUNDERPUR,Tehsil Behat<br/>
+      Distt Saharanpur(U.P.)<br/>
+  </div>
+</div>
+</section>
+  <div>
+     <p align="center">Our Doon Group of College</p>
+     <p align="center">Google map</p>
+         <div class="section"><p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3450.5980398782094!2d77.85752571458685!3d30.134313521277736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ecde97ba95b2f%3A0xebaaf4ed211440a1!2sDoon%20College!5e0!3m2!1sen!2sin!4v1595188211323!5m2!1sen!2sin" width="800" height="500" frameborder="1" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+</div>     
+  </div>
+    </div>
+
+</body>
+      </html>
